@@ -1,64 +1,766 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buildora Tech</title>
+
+    <title>Buildora Tech | Affordable No-Code Apps for Small Businesses</title>
+
+    <meta name="description"
+          content="Buildora Tech creates affordable booking and scheduling apps for clinics, coaches, laundry businesses and other small businesses using no-code platforms.">
 
     <style>
-        body {
+        * {
+            box-sizing: border-box;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7fb;
-            color: #222;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #172033;
+            background: #ffffff;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #155eef;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #155eef;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: linear-gradient(135deg, #eef5ff, #ffffff);
+            padding: 110px 7%;
             text-align: center;
         }
 
-        header {
-            background: #111827;
-            color: white;
-            padding: 60px 20px;
+        .hero h1 {
+            font-size: 54px;
+            line-height: 1.15;
+            max-width: 900px;
+            margin: auto;
+            color: #111827;
         }
 
-        h1 {
-            font-size: 48px;
-            margin: 0 0 15px;
+        .hero h1 span {
+            color: #155eef;
         }
 
-        p {
+        .hero p {
+            max-width: 720px;
+            margin: 25px auto;
             font-size: 20px;
+            color: #4b5563;
         }
 
         .button {
             display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background: #2563eb;
-            color: white;
+            padding: 15px 28px;
+            background: #155eef;
+            color: #ffffff;
             text-decoration: none;
             border-radius: 8px;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: 0.2s;
         }
 
+        .button:hover {
+            background: #0d47c7;
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            background: #ffffff;
+            color: #155eef;
+            border: 2px solid #155eef;
+        }
+
+        .button-outline:hover {
+            background: #eef5ff;
+        }
+
+        /* GENERAL SECTIONS */
+
         section {
-            padding: 50px 20px;
+            padding: 85px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .section-description {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            color: #6b7280;
+            font-size: 18px;
+        }
+
+        /* SERVICES */
+
+        .services {
+            background: #f8fafc;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 35px 28px;
+            border-radius: 14px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            transition: 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-icon {
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .service-card p {
+            color: #6b7280;
+        }
+
+        /* WHY US */
+
+        .why-us {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .feature {
+            padding: 25px;
+            border-left: 4px solid #155eef;
+            background: #f8fafc;
+            border-radius: 5px;
+        }
+
+        .feature h3 {
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .feature p {
+            color: #6b7280;
+        }
+
+        /* PROCESS */
+
+        .process {
+            background: #f8fafc;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .step {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .step-number {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #155eef;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .step h3 {
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .step p {
+            color: #6b7280;
+        }
+
+        /* PRICING */
+
+        .pricing {
+            text-align: center;
+        }
+
+        .price-box {
+            max-width: 750px;
+            margin: auto;
+            padding: 50px 35px;
+            border-radius: 15px;
+            background: #eef5ff;
+            border: 1px solid #d5e4ff;
+        }
+
+        .price-box h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .price-box p {
+            color: #4b5563;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #111827;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .contact > p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #d1d5db;
+            font-size: 18px;
+        }
+
+        .contact-box {
+            max-width: 650px;
+            margin: 35px auto 0;
+            padding: 30px;
+            background: #1f2937;
+            border-radius: 12px;
+        }
+
+        .contact-box p {
+            color: #d1d5db;
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0b1120;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 75px 6%;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .service-grid,
+            .features,
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 6%;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .price-box {
+                padding: 35px 20px;
+            }
+
+            .contact h2 {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Buildora Tech</h1>
-        <p>Building innovative digital solutions.</p>
-        <a href="#about" class="button">Learn More</a>
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="logo">
+            Buildora Tech
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#services">Solutions</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <header class="hero">
+
+        <h1>
+            Simple Apps.
+            <span>Smart Solutions.</span>
+            Affordable Prices.
+        </h1>
+
+        <p>
+            We build practical booking and scheduling apps
+            for small businesses using powerful no-code platforms.
+        </p>
+
+        <a href="#contact" class="button">
+            Get a Free Consultation
+        </a>
+
+        <a href="#services" class="button button-outline">
+            Explore Our Solutions
+        </a>
+
     </header>
 
-    <section id="about">
-        <h2>Welcome to Buildora Tech</h2>
-        <p>
-            This is our new website powered by GitHub Pages.
+
+    <!-- SERVICES -->
+
+    <section id="services" class="services">
+
+        <h2 class="section-title">
+            What We Build
+        </h2>
+
+        <p class="section-description">
+            Simple digital solutions designed around the way
+            your business actually works.
         </p>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">🏥</div>
+
+                <h3>
+                    Clinic Booking Apps
+                </h3>
+
+                <p>
+                    Make appointment management easier with
+                    online booking, doctor availability,
+                    patient scheduling and reminders.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🎓</div>
+
+                <h3>
+                    Coaching Apps
+                </h3>
+
+                <p>
+                    Let clients book coaching sessions,
+                    check availability and manage their
+                    appointments from one simple system.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🧺</div>
+
+                <h3>
+                    Laundry Scheduling
+                </h3>
+
+                <p>
+                    Organize pickup and delivery schedules,
+                    customer orders and laundry bookings
+                    in one convenient application.
+                </p>
+
+            </div>
+
+        </div>
+
     </section>
+
+
+    <!-- WHY CHOOSE US -->
+
+    <section id="why-us">
+
+        <h2 class="section-title">
+            Why Choose Buildora Tech?
+        </h2>
+
+        <p class="section-description">
+            You don't need a large software budget to get
+            a useful digital solution.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+
+                <h3>
+                    💰 Affordable
+                </h3>
+
+                <p>
+                    We focus on practical solutions that fit
+                    small-business budgets.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>
+                    ⚡ Faster Development
+                </h3>
+
+                <p>
+                    No-code platforms allow us to build and
+                    launch useful apps faster.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>
+                    🛠 Customized
+                </h3>
+
+                <p>
+                    Your app is designed around your specific
+                    business process and requirements.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>
+                    📱 Easy to Use
+                </h3>
+
+                <p>
+                    We create simple interfaces that your
+                    customers and staff can understand quickly.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>
+                    🔧 Easy to Maintain
+                </h3>
+
+                <p>
+                    No-code solutions make future changes
+                    simpler and more manageable.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>
+                    🤝 Personal Support
+                </h3>
+
+                <p>
+                    We work with you to understand your
+                    requirements and improve your solution.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+
+    <section id="process" class="process">
+
+        <h2 class="section-title">
+            How It Works
+        </h2>
+
+        <p class="section-description">
+            From idea to working application in four simple steps.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <h3>
+                    Tell Us Your Idea
+                </h3>
+
+                <p>
+                    Explain your business process and
+                    what you want your app to do.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <h3>
+                    We Design
+                </h3>
+
+                <p>
+                    We plan the screens, features and
+                    workflow of your application.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <h3>
+                    We Build
+                </h3>
+
+                <p>
+                    We develop your solution using
+                    no-code technology.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    4
+                </div>
+
+                <h3>
+                    You Launch
+                </h3>
+
+                <p>
+                    Your business gets a practical
+                    digital solution ready to use.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRICING -->
+
+    <section id="pricing" class="pricing">
+
+        <h2 class="section-title">
+            Reasonable Pricing
+        </h2>
+
+        <p class="section-description">
+            Technology should be accessible to small businesses.
+        </p>
+
+        <div class="price-box">
+
+            <h3>
+                Simple & Transparent
+            </h3>
+
+            <p>
+                Every business has different requirements.
+                Tell us what you need and we'll suggest a
+                practical solution at a reasonable price.
+            </p>
+
+            <a href="#contact" class="button">
+                Request a Quote
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <h2>
+            Have an App Idea?
+        </h2>
+
+        <p>
+            Tell us about your business and the problem
+            you'd like to solve. Let's see what we can
+            build for you.
+        </p>
+
+        <a href="#contact-details" class="button">
+            Get in Touch
+        </a>
+
+
+        <div id="contact-details" class="contact-box">
+
+            <p>
+                We would love to hear about your app idea.
+            </p>
+
+            <p>
+                📩 Contact Buildora Tech
+            </p>
+
+            <p>
+                Email: hellobuildoratech.in@gmail.com
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Buildora Tech. All rights reserved.
+
+        <br>
+
+        Simple digital solutions for small businesses.
+
+    </footer>
 
 </body>
 </html>
