@@ -123,15 +123,19 @@
       /* HERO */
 
 .hero {
-    background-image: linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)),
-                      url('hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 110px 7%;
-    text-align: center;
+  background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                    url('hero-background-4k.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 110px 7%;
+  text-align: center;
+  
+  /* add these 3 lines - prevents blur on scroll/retina */
+  min-height: 600px;
+  background-color: #ffffff; /* fallback while image loads */
+  -webkit-font-smoothing: antialiased;
 }
- 
 .hero h1 {
     font-size: 48px;
     line-height: 1.2;
