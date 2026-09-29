@@ -224,62 +224,65 @@
             font-size: 18px;
         }
 
-        /* SERVICES */
+      /* SERVICES */
 
-        .services {
-            background: #f0f7ff;
-        }
+.services {
+    background: #f0f7ff;
+}
 
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            max-width: 1100px;
-            margin: auto;
-        }
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+    align-items: stretch;
+}
 
-        .service-card {
-            background: #ffffff;
-            padding: 35px 28px;
-            border-radius: 14px;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-            transition: 0.2s;
-        }
+.service-card {
+    background: #e9f5ec !important;
+    padding: 15px 15px 28px 15px !important;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.2s;
+    overflow: hidden !important;
+    height: 620px !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
 
-        .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-        }
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
 
-        .service-icon {
-            font-size: 42px;
-            margin-bottom: 18px;
-        }
+.service-icon {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
 
 .service-card h3 {
-            font-size: 23px;
-            margin-bottom: 12px;
-            color: #111827;
-        }
+    font-size: 23px;
+    margin-bottom: 12px;
+    color: #111827;
+    margin-top: auto;
+}
 
-        .service-card p {
-            color: #6b7280;
-        }
+.service-card p {
+    color: #6b7280;
+}
 
-        .service-card{
-          background:#e9f5ec !important;
-          overflow:hidden !important;
-        }
-
-        .service-card img{
-          height:420px !important;
-          width:100% !important;
-          object-fit:contain !important;
-          object-position:bottom center !important;
-          display:block !important;
-          margin:0 auto !important;
-        }
+.service-card img{
+  height: 400px !important;
+  min-height: 400px !important;
+  max-height: 400px !important;
+  width: 100% !important;
+  object-fit: contain !important;
+  object-position: bottom center !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
 
         /* WHY US */
 
