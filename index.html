@@ -225,7 +225,6 @@
         }
 
 /* ================= SERVICES - COMPLETE FINAL ================= */
-
 .services {
     background: #f0f7ff;
     padding: 80px 20px;
@@ -255,39 +254,28 @@
     transform: translateY(-6px);
 }
 
-/* White box behind phone */
+/* White box - DESKTOP FIXED */
 .service-card > div:first-child,
 .service-card .image-wrapper,
 .service-card .img-box {
     background: #ffffff;
     border-radius: 14px;
-    height: 340px;
+    height: 360px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    padding: 0;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
-/* If your HTML is just <img> without wrapper div, this will create white box */
-.service-card > img {
-    background: #ffffff;
-    border-radius: 14px;
-    height: 340px;
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-}
-
-/* Phone image inside white box - BIG */
+/* Image - DESKTOP FIXED TO BE BIG */
 .service-card img {
+    width: 100%;
     height: 100%;
-    width: auto;
-    max-width: 85%;
     object-fit: contain;
-    object-position: center;
+    transform: scale(2.8);
     display: block;
-    margin: 0 auto;
 }
 
 .service-card h3 {
@@ -322,7 +310,7 @@
     margin-right: 6px;
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
+/* ================= MOBILE MEDIA - LEFT UNCHANGED ================= */
 @media (max-width: 992px) {
     .service-grid {
         grid-template-columns: repeat(2, 1fr);
