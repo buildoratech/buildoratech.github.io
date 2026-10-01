@@ -224,7 +224,8 @@
             font-size: 18px;
         }
 
-/* ================= SERVICES - COMPLETE FINAL ================= */
+/* ================= SERVICES - COMPLETE FINAL FIXED ================= */
+
 .services {
     background: #f0f7ff;
     padding: 80px 20px;
@@ -247,34 +248,35 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .service-card:hover {
     transform: translateY(-6px);
 }
 
-/* White box - DESKTOP FIXED */
+/* White box behind phone */
 .service-card > div:first-child,
 .service-card .image-wrapper,
 .service-card .img-box {
     background: #ffffff;
     border-radius: 14px;
-    height: 360px;
+    height: 420px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
     margin-bottom: 20px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
-/* Image - DESKTOP FIXED TO BE BIG */
+/* Phone image - BIG like your screenshot */
 .service-card img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transform: scale(2.8);
+    transform: scale(1.85);
     display: block;
 }
 
@@ -296,18 +298,16 @@
 .service-card .btn,
 .service-card button,
 .service-card a.btn {
-    background: #111827;
+    background: #2f5aff;
     color: #fff;
-    padding: 10px 18px;
-    border-radius: 8px;
+    padding: 12px 18px;
+    border-radius: 10px;
     text-align: center;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
     margin-top: auto;
-    display: inline-block;
-    margin-left: 6px;
-    margin-right: 6px;
+    display: block;
 }
 
 /* ================= MOBILE MEDIA - LEFT UNCHANGED ================= */
@@ -325,12 +325,11 @@
         grid-template-columns: 1fr;
         gap: 22px;
     }
-    .service-card > div:first-child,
-    .service-card > img {
+    .service-card > div:first-child {
         height: 380px;
     }
     .service-card img {
-        max-width: 65%;
+        transform: scale(1.85);
     }
 }
         /* WHY US */
