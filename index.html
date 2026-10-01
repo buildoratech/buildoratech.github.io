@@ -223,12 +223,26 @@
             color: #6b7280;
             font-size: 18px;
         }
-
+ 
+/*Service*/
+ 
 .services {
     background: #f0f7ff;
     padding: 80px 20px;
 }
-
+.services h2 {
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+.services .subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 50px;
+    font-size: 17px;
+}
 .service-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -237,7 +251,6 @@
     margin: 0 auto;
     align-items: stretch;
 }
-
 .service-card {
     background: #e9f5ec;
     padding: 16px 16px 22px 16px;
@@ -247,8 +260,6 @@
     display: flex;
     flex-direction: column;
 }
-
-/* White box - FIXED FOR TOP CROP */
 .service-card > div:first-child {
     background: #ffffff;
     border-radius: 14px;
@@ -260,8 +271,6 @@
     margin-bottom: 20px;
     overflow: hidden;
 }
-
-/* Phone - BIG but FULL TOP VISIBLE */
 .service-card img {
     width: 100%;
     height: 100%;
@@ -271,14 +280,12 @@
     transform-origin: top center;
     display: block;
 }
-
 .service-card h3 {
     font-size: 19px;
     font-weight: 700;
     color: #111827;
     margin: 0 0 8px 0;
 }
-
 .service-card p {
     font-size: 14px;
     line-height: 1.6;
@@ -286,9 +293,7 @@
     margin: 0 0 18px 0;
     flex-grow: 1;
 }
-
-.service-card .btn,
-.service-card a {
+.service-card .btn {
     background: #155eef;
     color: #fff;
     padding: 12px 18px;
@@ -300,24 +305,27 @@
     margin-top: auto;
     display: block;
 }
-
-@media (max-width: 992px) {
-    .service-grid { 
-        grid-template-columns: repeat(2, 1fr); 
-    }
+.book-demo-wrap {
+    text-align: center;
+    margin-top: 45px;
 }
-
+.book-demo-btn {
+    background: #0f172a;
+    color: #fff;
+    padding: 15px 32px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+}
+@media (max-width: 992px) {
+    .service-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 768px) {
-    .services { 
-        padding: 50px 16px; 
-    }
-    .service-grid { 
-        grid-template-columns: 1fr; 
-        gap: 22px; 
-    }
-    .service-card > div:first-child {
-        height: 520px;
-    }
+    .services { padding: 50px 16px; }
+    .service-grid { grid-template-columns: 1fr; gap: 22px; }
+    .service-card > div:first-child { height: 520px; }
 }
         /* WHY US */
 
@@ -564,30 +572,36 @@
 
     </header>
 
-
 <!-- SERVICES -->
 <section id="services" class="services">
     <h2 class="section-title">What We Build</h2>
     <p class="section-description">Simple digital solutions designed around the way your business actually works.</p>
+    
     <div class="service-grid">
-        <div class="service-card" style="padding:12px 12px 25px 12px; border-radius:20px; overflow:hidden;">
-            <img src="clinic.png" alt="Clinic Booking App" style="width:100%; height:210px; object-fit:contain; object-position:top; background:#f0f9f4; border-radius:16px; margin-bottom:15px; border:1px solid #eef2f7;">
+        <div class="service-card">
+            <div><img src="clinic.png" alt="Clinic Booking App"></div>
             <h3>Clinic Booking Apps</h3>
             <p>Make appointment management easier with online booking, doctor availability, patient scheduling and reminders.</p>
-            <a href="#contact" style="display:inline-block; margin-top:12px; padding:10px 20px; background:#2563EB; color:#fff; border-radius:12px; text-decoration:none; font-size:14px; font-weight:600;">View Demo →</a>
+            <a href="#contact" class="btn">View Demo →</a>
         </div>
-        <div class="service-card" style="padding:12px 12px 25px 12px; border-radius:20px; overflow:hidden;">
-            <img src="coaching.png" alt="Coaching App" style="width:100%; height:210px; object-fit:contain; object-position:top; background:#f0f9f4; border-radius:16px; margin-bottom:15px; border:1px solid #eef2f7;">
+
+        <div class="service-card">
+            <div><img src="coaching.png" alt="Coaching App"></div>
             <h3>Coaching Apps</h3>
             <p>Let clients book coaching sessions, check availability and manage their appointments from one simple system.</p>
-            <a href="#contact" style="display:inline-block; margin-top:12px; padding:10px 20px; background:#2563EB; color:#fff; border-radius:12px; text-decoration:none; font-size:14px; font-weight:600;">View Demo →</a>
+            <a href="#contact" class="btn">View Demo →</a>
         </div>
-        <div class="service-card" style="padding:12px 12px 25px 12px; border-radius:20px; overflow:hidden;">
-            <img src="laundry.png" alt="Laundry App" style="width:100%; height:210px; object-fit:contain; object-position:top; background:#f0f9f4; border-radius:16px; margin-bottom:15px; border:1px solid #eef2f7;">
+
+        <div class="service-card">
+            <div><img src="laundry.png" alt="Laundry App"></div>
             <h3>Laundry Scheduling</h3>
             <p>Organize pickup and delivery schedules, customer orders and laundry bookings in one convenient application.</p>
-            <a href="#contact" style="display:inline-block; margin-top:12px; padding:10px 20px; background:#2563EB; color:#fff; border-radius:12px; text-decoration:none; font-size:14px; font-weight:600;">View Demo →</a>
+            <a href="#contact" class="btn">View Demo →</a>
         </div>
+    </div>
+
+    <div class="book-demo-wrap">
+      <a href="#contact" class="book-demo-btn">Book Demo</a>
     </div>
 </section>
     <!-- WHY CHOOSE US -->
