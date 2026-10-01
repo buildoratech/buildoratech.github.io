@@ -224,7 +224,7 @@
             font-size: 18px;
         }
 
-/* ================= SERVICES - COMPLETE FINAL - NO CROP BIG PHONES ================= */
+/* ================= SERVICES - FINAL BIG NO CROP ================= */
 
 .services {
     background: #f0f7ff;
@@ -250,30 +250,25 @@
     flex-direction: column;
 }
 
-/* White box - SAME height for all 3 */
-.service-card > div:first-child,
-.service-card .image-wrapper,
-.service-card .img-box {
+/* White box - fixed height */
+.service-card > div:first-child {
     background: #ffffff;
     border-radius: 14px;
-    height: 520px;
-    min-height: 520px;
+    height: 480px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 0;
     margin-bottom: 20px;
-    overflow: hidden;
-    flex-shrink: 0;
+    overflow: hidden; /* crops empty space around phone in image file */
 }
 
-/* Phone - BIG and full visible - NO CROP */
+/* Phone - BIG - this is what made your "that is better" screenshot big */
 .service-card img {
     width: 100%;
     height: 100%;
-    max-width: 100%;
     object-fit: contain;
-    transform: none;
+    transform: scale(2.3); /* makes tiny phone BIG - adjust 2.0 to 2.6 if needed */
     display: block;
 }
 
@@ -293,10 +288,8 @@
 }
 
 .service-card .btn,
-.service-card button,
-.service-card a.btn,
 .service-card a {
-    background: #2f5aff;
+    background: #155eef;
     color: #fff;
     padding: 12px 18px;
     border-radius: 10px;
@@ -306,29 +299,14 @@
     font-weight: 600;
     margin-top: auto;
     display: block;
-    border: none;
-    cursor: pointer;
 }
 
-/* ================= MOBILE - LEFT UNCHANGED ================= */
 @media (max-width: 992px) {
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .service-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 768px) {
-    .services {
-        padding: 50px 16px;
-    }
-    .service-grid {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-    .service-card > div:first-child {
-        height: 480px;
-        min-height: 480px;
-    }
+    .services { padding: 50px 16px; }
+    .service-grid { grid-template-columns: 1fr; gap: 22px; }
 }
         /* WHY US */
 
