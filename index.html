@@ -250,25 +250,23 @@
     flex-direction: column;
 }
 
-/* White box - fixed height */
 .service-card > div:first-child {
     background: #ffffff;
     border-radius: 14px;
-    height: 480px;
+    height: 560px; /* only change: 480 -> 560 for bigger like last screenshot */
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
     margin-bottom: 20px;
-    overflow: hidden; /* crops empty space around phone in image file */
+    overflow: hidden;
 }
 
-/* Phone - BIG - this is what made your "that is better" screenshot big */
 .service-card img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transform: scale(2.3); /* makes tiny phone BIG - adjust 2.0 to 2.6 if needed */
+    transform: scale(2.3);
     display: block;
 }
 
