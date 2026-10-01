@@ -248,23 +248,27 @@
     flex-direction: column;
 }
 
+/* White box - FIXED FOR TOP CROP */
 .service-card > div:first-child {
     background: #ffffff;
     border-radius: 14px;
-    height: 430px;
+    height: 580px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding: 10px;
+    padding-top: 12px;
     margin-bottom: 20px;
     overflow: hidden;
 }
 
+/* Phone - BIG but FULL TOP VISIBLE */
 .service-card img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transform: scale(1.35);
+    object-position: top center;
+    transform: scale(1.95);
+    transform-origin: top center;
     display: block;
 }
 
@@ -297,47 +301,22 @@
     display: block;
 }
 
-/* Tablet */
 @media (max-width: 992px) {
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .service-card > div:first-child {
-        height: 400px;
+    .service-grid { 
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
-    .services {
-        padding: 50px 16px;
+    .services { 
+        padding: 50px 16px; 
     }
-
-    .service-grid {
-        grid-template-columns: 1fr;
-        gap: 22px;
+    .service-grid { 
+        grid-template-columns: 1fr; 
+        gap: 22px; 
     }
-
-    .service-card {
-        padding: 14px 14px 20px;
-    }
-
     .service-card > div:first-child {
-        height: 360px;
-        padding: 8px;
-    }
-
-    .service-card img {
-        transform: scale(1.15);
-    }
-
-    .service-card h3 {
-        font-size: 18px;
-    }
-
-    .service-card p {
-        font-size: 14px;
+        height: 520px;
     }
 }
         /* WHY US */
